@@ -1,6 +1,8 @@
+
+
 @font-face {
     font-family: Exo;
-    src: url(../Exo/Exo-VariableFont_wght.ttf);
+    src: url(../fonts/Exo/Exo-VariableFont_wght.ttf);
 }
 
 *{
@@ -10,19 +12,85 @@
     font-family: Exo;
 }
 
+:root {
+    --color-light: #f4f4f4;
+    --color-dark: #333333;
+    --color-red: #7a1b14;
+    --color-black: #000000;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+}
+
 body{
     background:rgb(255, 255, 255);
     overflow-x:hidden;
 }
 
-.hero{
-    position:relative;
+html {
+    scroll-behavior: smooth;
+}
+
+.header-hero {  
+    position: relative;
     width:100%;
     height:100vh;
-    background-image:
-    linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,1)), url("/img/Site Empresarial Aplicativo de Tecnologia Ousado Roxo e Azul-escuro.jpg");
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,1)), url("/img/DoofyImage.jpg");
     background-size:cover;
     background-position:center;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+a:hover {
+    color: var(--color-light);
+    border: 2px solid var(--color-red);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 80px;
+    background-color: var(--color-red);
+    transition: .5s;
+}
+
+.nav-bnt{
+    width:90%;
+    height:10dvh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: var(--color-black);
+    padding-inline: 40px;
+    margin: 20px auto;
+    border-radius: 60px;
+    
+}
+
+.nav-h1{
+    color: var(--color-light);
+    font-size: 35px;
+    font-weight: 700;
+    padding: 30px;
+}
+
+.menu-list {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    padding: 0px;
+}
+
+.btn.menu-list-item:hover {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: 80px;
+    transition: .5s;
+    background-color: #7a1b14;
 }
 
 
@@ -35,8 +103,67 @@ body{
     padding-inline:8%;
 }
 
+.btn {
+    width: auto;
+    height:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 0 15px;
+    background-color:transparent;
+    color:var(--color-light);
+    font-weight:700;
+    border-radius:5px;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+.cta {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta p{
+    color: var(--color-light);
+    font-size:1.5rem;
+    font-weight:300;
+    margin-bottom:20px;
+}
+
+.btn-hero {
+    width: 50px;
+    height: 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:var(--color-red);
+    color:var(--color-light);
+    font-weight:700;
+    border-radius: 50%;
+    transition: 0.5s;
+    
+}
+
+.btn-hero i {
+    font-size: 24px;
+    color: var(--color-light);
+}
+
+.btn-hero:hover {
+    background-color: transparent;
+}
+
+
 .nome h1{
-    color:white;
+    color: var(--color-light);
     font-size:17vmin;
     font-weight:700;
 }
@@ -54,7 +181,7 @@ body{
 
 .resumo{
     width:420px;
-    color:white;
+    color:var(--color-light);
 }
 
 .resumo h3{
@@ -70,16 +197,34 @@ body{
 }
 
 .resumo p{
-    color:#d1d1d1;
+    color: var(--color-light);
     font-size:1rem;
     line-height:1.5;
 }
 
-.transition img{
+.transition {
     filter: brightness(0%);
     width: 100%;
 }
 
 section {
     height: 100vh;
+}
+
+.site-footer {
+    width:100%;
+    height:50dvh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--color-light);
+    background-image: url('../img/transition-bottom.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.site-footer p {
+    margin-bottom: 10px;
+    min-height: 60px;
 }
