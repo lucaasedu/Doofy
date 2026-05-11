@@ -61,15 +61,14 @@ a:hover {
 
 .nav-bnt{
     width:90%;
-    height:10dvh;
+    height:14dvh;
     display:flex;
     justify-content:space-between;
     align-items:center;
     background-color: var(--color-black);
     padding-inline: 40px;
     margin: 20px auto;
-    border-radius: 60px;
-    
+    border-radius: 20px;
 }
 
 .nav-h1{
